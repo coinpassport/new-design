@@ -33,15 +33,19 @@ footer menu a { display:block; color:#eee;}
 
 article.page { max-width:720px; margin:0 auto; }
 
-#home-banner {position:relative; min-height:400px; display:flex; flex-direction:column; justify-content:center;max-width: 900px;margin:0 auto;}
+#home-banner {background:radial-gradient(ellipse at top, #af00e7 0%, #3d1bce 50%, #16adfc 100%);}
+#home-banner .inner {position:relative; min-height:400px; display:flex; flex-direction:column; justify-content:center;max-width: 900px;margin:0 auto; }
+#home-banner article {position:relative; z-index:2;}
 #home-banner p { font-size:150%; background:#0006;padding:10px; }
 #home-banner p .simple { font-style:italic; text-shadow:none; display:block; font-weight:bold; background: linear-gradient(90deg, #fae3b7, #edb851); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-#passport-wrapper {position:absolute; z-index:-1; top:0px; right:20px; transform:rotate(-30deg) scale(90%);}
+#passport-wrapper {position:absolute; z-index:1; top:0px; right:20px; transform:rotate(-30deg) scale(90%);}
 #passport {width:300px; height:400px; border-radius:0 20px 20px 0; background:linear-gradient(90deg, #070d2b 0%, #070d2b00 40px), radial-gradient(ellipse at top, #81efec99, transparent 50%), linear-gradient(90deg, #002a64, #070d2b 100%), #ff0; color:#fff; text-align:center; position:relative; box-shadow:0 0 30px #000;}
 #passport:after {content:" "; position:absolute; width:298px; height:398px; background:linear-gradient(180deg, #ccc 0%, #888 100%);top:1px; left:1px; z-index:-1; border-radius:0 20px 20px 0; border-width:3px 0 0 3px; border-style:solid; border-color:#070d2b;}
 #passport span {font-weight:500; font-size:32px; padding:20px 0; text-transform:uppercase; display:block; background: linear-gradient(90deg, #fae3b7, #edb851); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 #passport img {width:150px;margin-bottom:20px;}
 #passport .chip {background: linear-gradient(90deg, #fae3b7, #edb851); box-shadow:0 -1px 3px #000;width:30px; height:15px; margin:0 auto;}
 
-#white-banner { background:#eee; color:#222;background-image:url(images/dao-2.png); background-size:contain; background-position:top right; background-repeat: no-repeat no-repeat; min-height:400px; }
-#grey-banner { background-image:url(images/collage.png); background-size:contain; background-position:top right; background-repeat: no-repeat no-repeat;  background-color:#bbb; min-height:300px; color:#111; margin-bottom:20px; }
+#white-banner { background:linear-gradient(180deg, #999 0%, #ccc 10px, #f5f5f5 100%);}
+#white-banner article {color:#222;background-image:url(images/dao-2.png); background-size:contain; background-position:top right; background-repeat: no-repeat no-repeat; min-height:400px; }
+#grey-banner {background:linear-gradient(180deg, #999 0%, #bbb 10px, #d5d5d5 100%); box-shadow:0 3px 8px #0004; }
+#grey-banner article { background-image:url(images/collage.png); background-size:contain; background-position:top right; background-repeat: no-repeat no-repeat;   min-height:300px; color:#111; margin-bottom:20px; }
