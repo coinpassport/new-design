@@ -25,6 +25,8 @@ header a span i { display:inline-block; width:1.5em; height:1.5em; background-si
 header a span.mainnet i {background-image:url(images/mainnet.webp);}
 header a span.account i {background-image:url(images/chef.webp);}
 header a span.uk i {background-image:url(images/uk.png);}
+header menu { display:none; }
+
 
 footer {max-width:720px; margin:0 auto 20px ; padding:0 10px;}
 footer menu {display:flex; list-style:none; margin:0; padding:0;}
@@ -33,19 +35,31 @@ footer menu a { display:block; color:#eee;}
 
 article.page { max-width:720px; margin:0 auto; }
 
-#home-banner {background:radial-gradient(ellipse at top, #af00e7 0%, #3d1bce 50%, #16adfc 100%);}
-#home-banner .inner {position:relative; min-height:400px; display:flex; flex-direction:column; justify-content:center;max-width: 900px;margin:0 auto; }
+#home-banner {background: linear-gradient(170deg, transparent 0, transparent 50%, #ddd 50.2%), radial-gradient(ellipse 35% 35% at 8% 10%, #ff6b0b85 0%, #ec00c355 50%, #1200f155 100%), radial-gradient(ellipse 55% 75% at 40% 40%, #af00e7a5 0%, #3d1bce95 50%, #16adfc95 100%);}
+#home-banner .inner {position:relative; min-height:400px;justify-content:center;max-width: 1000px;margin:0 auto; }
+#home-banner nav {display:flex;justify-content:space-between;position:relative;z-index:3;}
+#home-banner article{ display:flex; flex-direction:column; }
+#home-banner h1 {margin:0; padding:10px; font-size:130%;}
+#home-banner nav a {text-decoration:none; color:#fff; font-weight:bold; background:#fff2; height:30px; border-radius:15px; font-size:13px; line-height:30px; margin-top:15px; margin-right: 10px; word-wrap:nowrap; padding:0 18px;}
+#home-banner nav a:hover {background:#fff3;}
 #home-banner article {position:relative; z-index:2;}
-#home-banner p { font-size:150%; background:#0006;padding:10px; }
-#home-banner p .simple { font-style:italic; text-shadow:none; display:block; font-weight:bold; background: linear-gradient(90deg, #fae3b7, #edb851); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+#home-banner p { font-size:350%; font-weight:500; background: linear-gradient(170deg, #fae3b7 50%, #113 50.2%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 #passport-wrapper {position:absolute; z-index:1; top:0px; right:20px; transform:rotate(-30deg) scale(90%);}
+@media (max-width:1000px) { #home-banner p { font-size:300%;background-image:linear-gradient(170deg, #fae3b7 56%, #113 56.2%); } }
+@media (max-width:930px) { #home-banner p { font-size:290%;background-image:linear-gradient(170deg, #fae3b7 58%, #113 58.2%); } }
+@media (max-width:900px) { #home-banner p { font-size:260%;background-image:linear-gradient(170deg, #fae3b7 63%, #113 63.2%); } }
+@media (max-width:850px) { #home-banner p { font-size:230%;background-image:none;color:#fae3b7; text-shadow:0 2px 4px #0005; background-clip: inherit; -webkit-background-clip: inherit; -webkit-text-fill-color: #fae3b7; } #passport-wrapper { top:-30px; right:-10px; transform:rotate(-30deg) scale(80%); }}
+@media (max-width:650px) { #home-banner p { font-size:230%; } #passport-wrapper { top:-60px; right:-30px; transform:rotate(-30deg) scale(60%); }}
+@media (max-width:410px) { #home-banner p {margin-top:0;} }
 #passport {width:300px; height:400px; border-radius:0 20px 20px 0; background:linear-gradient(90deg, #070d2b 0%, #070d2b00 40px), radial-gradient(ellipse at top, #81efec99, transparent 50%), linear-gradient(90deg, #002a64, #070d2b 100%), #ff0; color:#fff; text-align:center; position:relative; box-shadow:0 0 30px #000;}
 #passport:after {content:" "; position:absolute; width:298px; height:398px; background:linear-gradient(180deg, #ccc 0%, #888 100%);top:1px; left:1px; z-index:-1; border-radius:0 20px 20px 0; border-width:3px 0 0 3px; border-style:solid; border-color:#070d2b;}
-#passport span {font-weight:500; font-size:32px; padding:20px 0; text-transform:uppercase; display:block; background: linear-gradient(90deg, #fae3b7, #edb851); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-#passport img {width:150px;margin-bottom:20px;}
+#passport span {padding:20px 0; display:block; background: linear-gradient(90deg, #fae3b7, #edb851); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+#passport span.text2 {font-weight:500; font-size:32px; text-transform:uppercase; }
+#passport span.text3 {font-size:26px;}
+#passport img {width:110px;}
 #passport .chip {background: linear-gradient(90deg, #fae3b7, #edb851); box-shadow:0 -1px 3px #000;width:30px; height:15px; margin:0 auto;}
 
-#white-banner { background:linear-gradient(180deg, #999 0%, #ccc 10px, #f5f5f5 100%);}
+#white-banner { background:#ddd;}
 #white-banner article {color:#222;background-image:url(images/dao-2.png); background-size:contain; background-position:top right; background-repeat: no-repeat no-repeat; min-height:400px; }
-#grey-banner {background:linear-gradient(180deg, #999 0%, #bbb 10px, #d5d5d5 100%); box-shadow:0 3px 8px #0004; }
+#grey-banner {background:linear-gradient(180deg, #ddd 10px, #eee 50%);  }
 #grey-banner article { background-image:url(images/collage.png); background-size:contain; background-position:top right; background-repeat: no-repeat no-repeat;   min-height:300px; color:#111; margin-bottom:20px; }
