@@ -2,7 +2,7 @@
 @font-face { font-family: Inter; font-weight: 500; src: url(fonts/Inter-SemiBold.ttf); }
 
 
-body {background:#eee; color:#222; font-family:Inter, sans-serif; min-height:100vh; margin:0; padding:0; overflow-x:hidden; max-width:100vw;}
+body {background:#ddd; color:#222; font-family:Inter, sans-serif; min-height:100vh; margin:0; padding:0; overflow-x:hidden; max-width:100vw;}
 article {padding:30px 10px; }
 #wizard {max-width:720px; padding:0; margin:0 auto; background:#eee; color:#222; border-radius: 10px 10px 0 0; box-shadow: 0 0 30px #000; }
 #wizard h1 {background:linear-gradient(180deg, #dbdbdb 0%, #d6d6d6 100%); border-width:1px 0; border-style:solid; border-color:#e8e8e8 #000 #a7a7a7 #000; margin:0; padding: 14px 0; font-size: 100%; text-align:center; border-radius: 10px 10px 0 0;}
@@ -25,7 +25,13 @@ header a span i { display:inline-block; width:1.5em; height:1.5em; background-si
 header a span.mainnet i {background-image:url(images/mainnet.webp);}
 header a span.account i {background-image:url(images/chef.webp);}
 header a span.uk i {background-image:url(images/uk.png);}
-header menu { display:none; }
+.relative { position:relative; }
+header menu { display:none; list-style:none; margin:0; padding:5px; border-radius:5px;}
+header menu.active {display:block; background:#000a; position:absolute;right:0;top:2.7em;z-index:2; box-shadow:0 4px 5px #0003;}
+header menu.active:after {content:" "; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#ff00;z-index:-1;}
+header menu img {width:20px; height:20px; border-radius:50%; margin-right:5px;}
+header menu a {margin:0;background:none;display:block;white-space:nowrap;}
+header menu a span {vertical-align:top;}
 
 
 footer {text-shadow:0 1px 1px #fff5; max-width:720px; margin:0 auto 20px ; padding:0 10px;}
@@ -36,7 +42,7 @@ footer menu a { display:block; color:#222;}
 article.page { max-width:720px; margin:0 auto; }
 
 .header-bg {background: linear-gradient(170deg, transparent 0, transparent 50%, #ddd 50.2%), radial-gradient(ellipse 35% 35% at 8% 10%, #ff6b0b85 0%, #ec00c355 50%, #1200f155 100%), radial-gradient(ellipse 55% 75% at 40% 40%, #af00e7a5 0%, #3d1bce95 50%, #16adfc95 100%);}
-#home-banner {}
+#home-banner {background: linear-gradient(170deg, transparent 0, transparent 50%, #ddd 50.2%), radial-gradient(ellipse 35% 35% at 8% 10%, #ff6b0b85 0%, #ec00c355 50%, #1200f155 100%), radial-gradient(ellipse 55% 75% at 40% 40%, #af00e7a5 0%, #3d1bce95 50%, #16adfc95 100%);}
 #home-banner .inner {position:relative; min-height:400px;justify-content:center;max-width: 1000px;margin:0 auto; }
 #home-banner nav {display:flex;justify-content:space-between;position:relative;z-index:3;}
 #home-banner article{ display:flex; flex-direction:column; }
@@ -64,3 +70,5 @@ article.page { max-width:720px; margin:0 auto; }
 #white-banner article {color:#222;background-image:url(images/dao-2.png); background-size:contain; background-position:top right; background-repeat: no-repeat no-repeat; min-height:400px; }
 #grey-banner {background:linear-gradient(180deg, #ddd 10px, #fff 50%);  }
 #grey-banner article { background-image:url(images/collage.png); background-size:contain; background-position:top right; background-repeat: no-repeat no-repeat;   min-height:300px; color:#111; margin-bottom:20px; }
+
+
