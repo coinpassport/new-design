@@ -10,5 +10,13 @@ document.querySelectorAll('[data-menu]').forEach(element => {
       menuEl.removeEventListener('click', handler, true);
     };
     menuEl.addEventListener('click', handler, true);
+
+    menuEl.querySelectorAll('.set-root').forEach(linkEl => {
+      const handler = event => {
+        element.innerHTML = event.currentTarget.innerHTML;
+        linkEl.removeEventListener('click', handler, true);
+      };
+      linkEl.addEventListener('click', handler, true);
+    });
   }, false);
 });

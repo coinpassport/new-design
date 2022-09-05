@@ -1,6 +1,7 @@
 @font-face { font-family: Inter; font-weight: 400; src: url(fonts/Inter-Regular.ttf); }
 @font-face { font-family: Inter; font-weight: 500; src: url(fonts/Inter-SemiBold.ttf); }
 
+.relative { position:relative; }
 
 body {background:#ddd; color:#222; font-family:Inter, sans-serif; min-height:100vh; margin:0; padding:0; overflow-x:hidden; max-width:100vw;}
 article {padding:30px 10px; }
@@ -20,18 +21,12 @@ button[disabled]:active { outline:none; border:1px solid #7b7b7b; }
 header {display:flex; justify-content:flex-end;}
 header a {margin:10px 5px; color:#fff; text-decoration:none; background:#0005; display:inline-block; padding:5px 8px 5px 5px; border-radius:5px; font-size:85%;}
 header a:hover { background:#0003; }
-header a span { line-height:1.5em; }
-header a span i { display:inline-block; width:1.5em; height:1.5em; background-size:cover; border-radius:50%; margin-right:5px;}
-header a span.mainnet i {background-image:url(images/mainnet.webp);}
-header a span.account i {background-image:url(images/chef.webp);}
-header a span.uk i {background-image:url(images/uk.png);}
-.relative { position:relative; }
+header a span {vertical-align:top;line-height:20px;}
 header menu { display:none; list-style:none; margin:0; padding:5px; border-radius:5px;}
-header menu.active {display:block; background:#000a; position:absolute;right:0;top:2.7em;z-index:2; box-shadow:0 4px 5px #0003;}
+header menu.active {display:block; background:#000a; position:absolute;right:0;top:48px;z-index:2; box-shadow:0 4px 5px #0003;}
 header menu.active:after {content:" "; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#ff00;z-index:-1;}
-header menu img {width:20px; height:20px; border-radius:50%; margin-right:5px;}
+header img {width:20px; height:20px; border-radius:50%; margin-right:2px;}
 header menu a {margin:0;background:none;display:block;white-space:nowrap;}
-header menu a span {vertical-align:top;}
 
 
 footer {text-shadow:0 1px 1px #fff5; max-width:720px; margin:0 auto 20px ; padding:0 10px;}
