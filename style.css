@@ -1,9 +1,11 @@
 @font-face { font-family: Inter; font-weight: 400; src: url(fonts/Inter-Regular.ttf); }
 @font-face { font-family: Inter; font-weight: 500; src: url(fonts/Inter-SemiBold.ttf); }
 
+* { box-sizing:border-box;}
 .relative { position:relative; }
+.hidden { display:none !important;}
 
-body {background:#ddd; color:#222; font-family:Inter, sans-serif; min-height:100vh; margin:0; padding:0; overflow-x:hidden; max-width:100vw;}
+body {background:#ddd; color:#222; font-family:Inter, sans-serif; min-height:100vh; margin:0; padding:0; overflow-x:hidden; max-width:100vw;display:flex;flex-direction:column;}
 article {padding:30px 10px; }
 #wizard {max-width:720px; padding:0; margin:0 auto; background:#eee; color:#222; border-radius: 10px 10px 0 0; box-shadow: 0 0 30px #000; }
 #wizard h1 {background:linear-gradient(180deg, #dbdbdb 0%, #d6d6d6 100%); border-width:1px 0; border-style:solid; border-color:#e8e8e8 #000 #a7a7a7 #000; margin:0; padding: 14px 0; font-size: 100%; text-align:center; border-radius: 10px 10px 0 0;}
@@ -29,14 +31,14 @@ header img {width:20px; height:20px; border-radius:50%; margin-right:2px;}
 header menu a {margin:0;background:none;display:block;white-space:nowrap;}
 
 
-footer {text-shadow:0 1px 1px #fff5; max-width:720px; margin:0 auto 20px ; padding:0 10px;}
+footer {text-shadow:0 1px 1px #fff5; width:100%; max-width:720px; margin:0 auto 0; padding:20px 10px; margin-top:auto;}
 footer menu {display:flex; list-style:none; margin:0; padding:0;}
 footer menu li { flex:1;  text-align:center;}
 footer menu a { display:block; color:#222;}
 
 article.page { max-width:720px; margin:0 auto; }
 
-.header-bg {background: linear-gradient(170deg, transparent 0, transparent 50%, #ddd 50.2%), radial-gradient(ellipse 35% 35% at 8% 10%, #ff6b0b85 0%, #ec00c355 50%, #1200f155 100%), radial-gradient(ellipse 55% 75% at 40% 40%, #af00e7a5 0%, #3d1bce95 50%, #16adfc95 100%);}
+.header-bg {background: linear-gradient(170deg, transparent 0, transparent 50vh, #ddd 50.2vh), radial-gradient(ellipse 35% 35% at 8% 10%, #ff6b0b85 0%, #ec00c355 50%, #1200f155 100%), radial-gradient(ellipse 55% 75% at 40% 40%, #af00e7a5 0%, #3d1bce95 50%, #16adfc95 100%);}
 #home-banner {background: linear-gradient(170deg, transparent 0, transparent 50%, #ddd 50.2%), radial-gradient(ellipse 35% 35% at 8% 10%, #ff6b0b85 0%, #ec00c355 50%, #1200f155 100%), radial-gradient(ellipse 55% 75% at 40% 40%, #af00e7a5 0%, #3d1bce95 50%, #16adfc95 100%);}
 #home-banner .inner {position:relative; min-height:400px;justify-content:center;max-width: 1000px;margin:0 auto; }
 #home-banner nav {display:flex;justify-content:space-between;position:relative;z-index:3;}

@@ -6,8 +6,8 @@
     <title>Verification</title>
     <link href="style.css" rel="stylesheet">
   </head>
-  <body>
-    <div class="header-bg">
+  <body class="header-bg">
+    <div>
       <header>
         <div class="relative">
           <a href="#" id="chain" data-menu="chain-menu" title="Select Chain">
@@ -84,15 +84,29 @@
         <div id="wizard">
           <h1>Coinpassport Verification</h1>
           <menu>
-            <li class="active">1. Pay Fee</li>
-            <li>2. Scan Document</li>
-            <li>3. Publish Result</li>
+            <li rel="step1" class="active">1. Pay Fee</li>
+            <li rel="step2">2. Scan Document</li>
+            <li rel="step3">3. Publish Result</li>
           </menu>
-          <main>
+          <main id="step1">
             <p>Document verification costs 3 USDC.</p>
             <p>Please approve and pay this amount.</p>
-            <button>Approve</button>
-            <button disabled>Pay Fee</button>
+            <button data-toggler="next">Approve</button>
+            <button disabled data-step="step2" data-toggler="prev">Pay Fee</button>
+          </main>
+          <main id="step2" class="hidden">
+            <p>You will be transfered to an external website to take a picture of your document and your face.</p>
+            <button data-step="step3">Perform Verification</button>
+          </main>
+          <main id="step3" class="hidden">
+            <p>You have successfully verified your identity.</p>
+            <p>Publish your unique hash to the blockchain in order to psuedonymously prove your being a unique human.</p>
+            <button data-step="active">Publish Result</button>
+          </main>
+          <main id="active" class="hidden">
+            <p>Your account is active!</p>
+            <button data-toggler="next">Redact</button>
+            <button disabled data-step="step1" data-toggler="prev">Revoke</button>
           </main>
         </div>
       </article>
