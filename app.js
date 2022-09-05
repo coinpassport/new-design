@@ -30,8 +30,12 @@ document.querySelectorAll('[data-step]').forEach(element => {
     if(activeMenuLi) activeMenuLi.classList.toggle('active', false);
     document.querySelector('#wizard>menu').classList.toggle('hidden', !thisMenuLi);
     thisMenuLi && thisMenuLi.classList.toggle('active', true);
-    document.querySelectorAll('#wizard>main').forEach(el =>
-      el.classList.toggle('hidden', el.id === step ? false : true));
+    function showMain(step) {
+      document.querySelectorAll('#wizard>main').forEach(el =>
+        el.classList.toggle('hidden', el.id === step ? false : true));
+    }
+    showMain('loading');
+    setTimeout(() => showMain(step), 900);
   }, true);
 });
 
