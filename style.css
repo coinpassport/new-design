@@ -7,11 +7,11 @@
 
 body {background:#ddd; color:#222; font-family:Inter, sans-serif; min-height:100vh; margin:0; padding:0; overflow-x:hidden; max-width:100vw;display:flex;flex-direction:column;}
 article {padding:30px 10px; }
-#wizard {max-width:720px; padding:0; margin:0 auto; background:#eee; color:#222; border-radius: 10px 10px 0 0; box-shadow: 0 0 30px #000; }
+#wizard {max-width:720px; padding:0; margin:auto 10px; align-self:center; background:#eee; color:#222; border-radius: 10px 10px 0 0; box-shadow: 0 0 30px #000; }
 #wizard h1 {background:linear-gradient(180deg, #dbdbdb 0%, #d6d6d6 100%); border-width:1px 0; border-style:solid; border-color:#e8e8e8 #000 #a7a7a7 #000; margin:0; padding: 14px 0; font-size: 100%; text-align:center; border-radius: 10px 10px 0 0;}
 #wizard menu {margin:0; padding:0 10px; list-style:none; display:flex; background:#c8c8c8; border-bottom:1px solid #9b9b9b;}
 @media (max-width:450px) { #wizard menu {flex-direction:column;} }
-#wizard menu li { border-bottom: 4px solid #0000; flex:1; text-align:center; padding: 10px; }
+#wizard menu li { border-bottom: 4px solid #0000; flex:1; text-align:center; padding: 10px; white-space:nowrap; }
 #wizard menu li.active { border-bottom-color:#15539e; }
 #wizard main { padding: 20px; }
 button,.button { border: 1px solid #9b9b9b; border-radius: 5px; border-bottom-color: #676767; background:linear-gradient(180deg, #c9c9c9 0%, #c5c5c5 1px, #c2c2c2 100%); color:#111; text-shadow:0 -1px 1px #9f9f9f; padding: 10px 18px; font-size: 100%; cursor:pointer; text-decoration:none;}
@@ -25,7 +25,7 @@ header a {margin:10px 5px; color:#fff; text-decoration:none; background:#0005; d
 header a:hover { background:#0003; }
 header a span {vertical-align:top;line-height:20px;}
 header menu { display:none; list-style:none; margin:0; padding:5px; border-radius:5px;}
-header menu.active {display:block; background:#000a; position:absolute;right:0;top:48px;z-index:2; box-shadow:0 4px 5px #0003;}
+header menu.active {display:block; background:#555e; border:1px solid #777; outline:1px solid #555;  position:absolute;right:5px;top:48px;z-index:2; box-shadow:0 4px 5px #0003;}
 header menu.active:after {content:" "; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#ff00;z-index:-1;}
 header img {width:20px; height:20px; border-radius:50%; margin-right:2px;}
 header menu a {margin:0;background:none;display:block;white-space:nowrap;}
